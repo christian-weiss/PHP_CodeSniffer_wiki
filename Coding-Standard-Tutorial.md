@@ -39,7 +39,7 @@ A sniff requires a single PHP file. It's name should clearly describe the standa
     $ mkdir Commenting
     $ touch Commenting/DisallowHashCommentsSniff.php
 
-> It does not matter what sub-directories you use for categorising your sniffs. Just make them descriptive enough so you can find your sniffs again later when you want to modify them.
+> It does not matter what sub-directories you use for categorising your sniffs. Just make them descriptive enough so you can find your sniffs again later when you want to modify them. Ensure your directory structure is [StandardName]/Sniffs/[Topic]/[SniffName] and make your class name fit to it: StandardName_Sniffs_Topic_SniffName. Use exact this count of class name elements.
 
 Each sniff must implement the `PHP_CodeSniffer_Sniff` interface so that PHP_CodeSniffer knows that it should instantiate the sniff once it's invoked. The `PHP_CodeSniffer_Sniff` interface defines two methods that must be implemented; `register` and `process`.
 
